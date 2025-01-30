@@ -49,13 +49,13 @@ function sleep(ms) {
  /*----------------------------------------------------------
  LIVE VALUES
  ----------------------------------------------------------*/
- let startDate = new Date(2023, 10, 3);
+ let startDate = new Date(2024, 7, 1);
  function experienceUpdate() {
     const months = ((new Date() - startDate) / 1000 / 60 / 60 / 24 / (365 / 12)).toPrecision(10);
     document.querySelector("#experience").innerHTML = months;
  }
  
- let birthday = new Date(2008, 11, 5);
+ let birthday = new Date(2007, 5, 13);
  function ageUpdate() {
     const age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365).toPrecision(10);
     document.querySelector("#age").innerHTML = age;
