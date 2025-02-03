@@ -271,4 +271,28 @@ function sleep(ms) {
        }
     });
  });
- 
+
+ // skills hover
+document.addEventListener("DOMContentLoaded", function () {
+   const buttons = document.querySelectorAll(".tab-btn");
+   const panels = document.querySelectorAll(".tab-panel");
+
+   buttons.forEach(button => {
+       button.addEventListener("click", () => {
+           // Remove active class from all buttons and panels
+           buttons.forEach(btn => btn.classList.remove("active"));
+           panels.forEach(panel => panel.classList.remove("active"));
+
+           // Add active class to clicked button and corresponding panel
+           button.classList.add("active");
+           document.getElementById(button.dataset.target).classList.add("active");
+       });
+   });
+});
+buttons.forEach(button => {
+   button.addEventListener("keypress", (event) => {
+       if (event.key === "Enter" || event.key === " ") {
+           button.click(); // Simulates a click on key press
+       }
+   });
+});
