@@ -88,7 +88,10 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
       <section id="skills">
-         <h1 class="skills-title"><span>My</span> Skills</h1>
+         <div class="blob"></div>
+         <div class="blur"></div>
+         <div class="title-wrapper">
+            <h1 data-cursor="large,invert">My Skills</h1>
 
          <div class="skills-container">
             <!-- Skill Categories -->
@@ -204,23 +207,49 @@
             <source src="videos/bg.mp4" type="video/mp4" />
          </video>
       </div>
+      
       <section id="projects">
-         <div data-cursor="large,invert" class="project-tile">
-            <h1>My <span>Projects</span></h1>
-            <!-- New Stuff Start -->
-            <div class="prj-card hidden">
-               <div class="header hidden">
-                  <div class="title">AppleTea <span>Self Project</span> <span class="new">New</span></div>
+         <div class="blob"></div>
+         <div class="blur"></div>
+         <div class="title-wrapper">
+            <h1 data-cursor="large,invert">My Projects</h1>
+         <div class="projects-deck">
+            <div class="project-card">
+               <div class="thumbnail">
+                  <img src="images/LIL.ico" alt="Project 1">
                </div>
-               <div data-cursor="gray,large,move" class="thumbnail hidden">
-                  <img loading="lazy" src="images/site-thumbnails/appletea.png" alt="" />
+               <div class="card-content">
+                  <h2>Python Library App</h2>
+                  <p>A digital library system where users can search, borrow, and manage books easily. It has book categories, availability status, and user accounts for tracking borrowed books.</p>
+                  <a href="project1.html" class="btn">View Source Code</a>
                </div>
-               <button data-prj="projects/appletea.html" data-cursor="pointer" class="more-info hidden">
-                  view project
-               </button>
+            </div>
+      
+            <div class="project-card">
+               <div class="thumbnail">
+                  <img src="images/land.png" alt="Project 2">
+               </div>
+               <div class="card-content">
+                  <h2>Bakery Landing Page</h2>
+                  <p>A pastel-themed website for a bakery, showcasing products, promotions, and customer reviews. It’s easy to navigate and works well on all devices.</p>
+                  <a href="project2.html" class="btn">View Source Code</a>
+               </div>
+            </div>
+      
+            <div class="project-card">
+               <div class="thumbnail">
+                  <img src="images/port.png" alt="Project 3">
+               </div>
+               <div class="card-content">
+                  <h2>Responsive Portfolio</h2>
+                  <p>A personal portfolio website to display skills, projects, and achievements. It has an about page, project gallery, and contact form, all designed to work smoothly on any screen.</p>
+                  <a href="project3.html" class="btn">View Source Code</a>
+               </div>
             </div>
          </div>
       </section>
+      
+
       <div class="parallax">
          <video autoplay muted loop>
             <source src="videos/bg.mp4" type="video/mp4" />

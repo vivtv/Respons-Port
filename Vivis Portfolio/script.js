@@ -164,99 +164,6 @@ function sleep(ms) {
     });
  });
  
- /*----------------------------------------------------------
- PAGE FULL PREVIEW
- ----------------------------------------------------------*/
- 
- let fullSitePrev = document.querySelector(".prj-info-view");
- let siteInfoContainer = document.querySelector(".prj-info-container");
- 
- const sitePreview = document.querySelectorAll(".more-info").forEach((btn) => {
-    let infoHTML = btn.getAttribute("data-prj");
- 
-    btn.addEventListener("click", () => {
-       fullSitePrev.classList.toggle("show");
- 
-       if (btn.hasAttribute("data-prj")) {
-          fetch(`${infoHTML}`)
-             .then((res) => {
-                if (res.ok) {
-                   return res.text();
-                }
-             })
-             .then((htmlSnippet) => {
-                siteInfoContainer.innerHTML = htmlSnippet;
-             });
-       }
-    });
- });
- 
- const observer = new MutationObserver(() => {
-    let cursorActionElements = siteInfoContainer.querySelectorAll("[data-cursor]");
-    cursorActionElements.forEach((el) => {
-       el.addEventListener("mouseover", (e) => {
-          e.stopPropagation();
-          const elAttr = e.currentTarget.getAttribute("data-cursor");
-          cursorEl.setAttribute("data-cursor", elAttr);
-       });
-       el.addEventListener("mouseleave", () => {
-          cursorEl.removeAttribute("data-cursor");
-       });
-    });
- });
- 
- observer.observe(siteInfoContainer, {
-    subtree: true,
-    childList: true,
- });
- 
- /*----------------------------------------------------------
- HIDDEN ELEMENTS RE
- ----------------------------------------------------------*/
- var lastScrollTop = 0;
- let direction;
- 
- function scrollDirection() {
-    let st = window.scrollY || document.documentElement.scrollTop;
- 
-    if (st > lastScrollTop) {
-       direction = "down";
-    } else if (st < lastScrollTop) {
-       direction = "up";
-    }
-    lastScrollTop = st <= 0 ? 0 : st;
- }
- document.addEventListener("scroll", () => {
-    scrollDirection();
- });
- 
- const hiddenElements = document.querySelectorAll(".hidden");
- 
- const hiddenElObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-       if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-       } else if (direction == "up") {
-          entry.target.classList.remove("show");
-       }
-    });
- });
- 
- hiddenElements.forEach((el) => hiddenElObserver.observe(el));
- 
- const navbar = document.querySelector(".nav-container");
- let scrollY = "";
- 
- window.addEventListener("scroll", (e) => {
-    scrollY = window.scrollY;
- 
-    if (scrollY > 0) {
-       navbar.classList.remove("hidden");
-    } else if (scrollY == 0) {
-       navbar.classList.add("hidden");
-    }
- });
- 
  // HOVER TRIGGER
  const trigger = document.querySelector(".nav");
  
@@ -293,4 +200,15 @@ function sleep(ms) {
       event.currentTarget.classList.add('active');
    }
 }
+
+// Project
+
+document.querySelectorAll(".project-card").forEach(card => {
+   card.addEventListener("mouseenter", () => {
+       card.style.transform = "scale(1.1)";
+   });
+   card.addEventListener("mouseleave", () => {
+       card.style.transform = "scale(1)";
+   });
+});
 

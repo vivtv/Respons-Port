@@ -989,118 +989,176 @@ FONTS
  ----------------------------------------------------------*/
  
  .projects-grid {
-    width: min(1100px, 100%);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3.5rem 1.5rem;
- }
- 
- .prj-card {
-    background-color: hsla(230, 100%, 50%, 0.02);
-    border: solid 1px hsla(0, 0%, 100%, 0.05);
-    border-top: solid 3px hsla(0, 0%, 100%, 0.05);
-    padding: 1rem;
-    border-radius: 0.5rem;
- 
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
- }
- /* PROJECT CARD HEADER */
- .prj-card .header {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
- }
- .prj-card .header span {
-    color: color-mix(in srgb, var(--clr-base-300), var(--clr-base-500) 10%);
- }
- .prj-card .header span.new {
-    display: inline-block;
-    vertical-align: middle;
-    color: var(--clr-danger);
-    font-size: .7em;
-    background-color: color-mix(in srgb, var(--clr-danger), transparent 60%);
-    padding: .1em .5em .2em;
-    border-radius: .2em;
- }
- 
- 
- /* PROJECT CARD THUMBNAIL */
- .thumbnail {
-    position: relative;
-    overflow: clip;
-    background-color: color-mix(in srgb, var(--clr-base-500), var(--clr-base-900) 80%);
-    user-select: none;
-    border-radius: 0.3rem;
-    padding: 1rem;
-    z-index: 0;
- 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
- }
- .thumbnail img {
-    display: inline-block;
-    width: 100%;
-    object-fit: contain;
- 
-    transition: scale 0.3s ease;
-    pointer-events: none;
- 
-    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--clr-base-900), transparent 60%));
- }
- .thumbnail:hover > img {
-    scale: 2;
- }
- 
- /* PROJECT CARD MORE INFO */
- .prj-card .more-info {
-    border: none;
- 
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 0.7rem 0.3rem;
-    border-radius: 0.2rem;
-    overflow: hidden;
- 
-    background-color: color-mix(in srgb, var(--clr-base-700) 70%, var(--clr-base-500));
-    font-size: 0.9rem;
-    z-index: 0;
- 
-    transition: 0.2s ease;
- }
- .prj-card .more-info::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    translate: -50% -50%;
-    width: 20%;
-    aspect-ratio: 1 / 1;
-    background-color: hsla(0, 0%, 100%, 0.15);
- 
-    opacity: 0;
- 
-    z-index: -1;
- 
-    transition: 0.1s;
- }
- 
- .prj-card .more-info:hover, .prj-card .more-info:focus {
-    background-color: color-mix(in srgb, var(--clr-base-700) 20%, var(--clr-base-500));
-    word-spacing: 0.1rem;
-    letter-spacing: 0.1rem;
-    text-shadow: 0 0 7px var(--clr-base-300);
- }
- .prj-card .more-info:active::before {
-    opacity: 1;
-    width: 120%;
- }
+   width: min(1100px, 100%);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 4rem 2rem;
+}
+
+.prj-card {
+   background-color: hsla(230, 100%, 50%, 0.02);
+   border: solid 1px hsla(0, 0%, 100%, 0.05);
+   border-top: solid 3px hsla(0, 0%, 100%, 0.05);
+   padding: 1rem;
+   border-radius: 0.5rem;
+
+   display: flex;
+   flex-direction: column;
+   gap: 1.6rem;
+}
+/* PROJECT CARD HEADER */
+.prj-card .header {
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+.prj-card .header span {
+   color: color-mix(in srgb, var(--clr-base-300), var(--clr-base-500) 10%);
+}
+.prj-card .header span.new {
+   display: inline-block;
+   vertical-align: middle;
+   color: var(--clr-danger);
+   font-size: .7em;
+   background-color: color-mix(in srgb, var(--clr-danger), transparent 60%);
+   padding: .1em .5em .2em;
+   border-radius: .2em;
+}
+
+
+/* PROJECT CARD THUMBNAIL */
+.thumbnail {
+   position: relative;
+   overflow: clip;
+   background-color: color-mix(in srgb, var(--clr-base-500), var(--clr-base-900) 80%);
+   user-select: none;
+   border-radius: 0.3rem;
+   padding: 1rem;
+   z-index: 0;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.thumbnail {
+   width: 100%; /* Ensures the container takes full width */
+   height: 200px; /* Set a fixed height for uniformity */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden; /* Prevents images from overflowing */
+   border-radius: 0.3rem;
+}
+
+.thumbnail img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Ensures images fill the space without distortion */
+}
+
+.thumbnail:hover > img {
+   scale: 2;
+}
+
+/* PROJECT CARD MORE INFO */
+.prj-card .more-info {
+   border: none;
+
+   display: inline-block;
+   position: relative;
+   width: 100%;
+   text-align: center;
+   text-transform: uppercase;
+   padding: 0.7rem 0.3rem;
+   border-radius: 0.2rem;
+   overflow: hidden;
+
+   background-color: color-mix(in srgb, var(--clr-base-700) 70%, var(--clr-base-500));
+   font-size: 0.9rem;
+   z-index: 0;
+
+   transition: 0.2s ease;
+}
+.prj-card .more-info::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   border-radius: 50%;
+   translate: -50% -50%;
+   width: 20%;
+   aspect-ratio: 1 / 1;
+   background-color: hsla(0, 0%, 100%, 0.15);
+
+   opacity: 0;
+
+   z-index: -1;
+
+   transition: 0.1s;
+}
+
+.prj-card .more-info:hover, .prj-card .more-info:focus {
+   background-color: color-mix(in srgb, var(--clr-base-700) 20%, var(--clr-base-500));
+   word-spacing: 0.1rem;
+   letter-spacing: 0.1rem;
+   text-shadow: 0 0 7px var(--clr-base-300);
+}
+.prj-card .more-info:active::before {
+   opacity: 1;
+   width: 120%;
+}
+.projects-deck {
+   display: flex;
+   justify-content: center;
+   gap: 2rem; /* Spacing between cards */
+   flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.project-card {
+   width: 30%;
+   max-width: 400px;
+   background-color: hsla(230, 100%, 50%, 0.02);
+   border: solid 1px hsla(0, 0%, 100%, 0.05);
+   border-top: solid 3px hsla(0, 0%, 100%, 0.05);
+   padding: 1.5rem;
+   border-radius: 0.5rem;
+   transition: transform 0.3s ease;
+   min-height: 500px; /* Ensures cards are taller */
+}
+
+.project-card:hover {
+   transform: scale(1.05);
+}
+
+.project-card img {
+   width: 100%;
+   height: 300px; /* Adjust for larger image height */
+   object-fit: cover;
+   border-radius: 0.3rem;
+   margin-bottom: 1rem; /* Adds spacing below the image */
+}
+
+.card-content h2 {
+   font-size: 1.5rem; /* Adjust title size if necessary */
+   margin-bottom: 1.5rem; /* Wider gap below the title */
+}
+
+.card-content p {
+   margin-bottom: 1.5rem; /* Adds space between the description and the button */
+   line-height: 1.5; /* Better readability for longer descriptions */
+}
+
+.card-content a {
+   text-decoration: none;
+   color: var(--clr-primary, #007BFF);
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+
+.project-card:hover {
+   transform: scale(1.05);
+}
  
  /*----------------------------------------------------------
  CONTACT SECTION
