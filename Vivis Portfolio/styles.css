@@ -1177,10 +1177,12 @@ FONTS
  ----------------------------------------------------------*/
  
  .contact-container {
-    width: min(1100px, 100%);
-    display: flex;
-    gap: 2rem;
- }
+   width: min(1100px, 100%);
+   display: flex;
+   gap: 2rem;
+   min-height: 300px; /* Ensure it does not collapse */
+}
+
  
  .contact-details {
     --padding: 1rem;
@@ -1339,6 +1341,7 @@ FONTS
     transition: .4s ease;
     z-index: 1;
  }
+
  
  /* INPUT EVENTS */
  .contact-form .input-box .input:not(:placeholder-shown) {
