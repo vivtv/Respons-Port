@@ -5,7 +5,7 @@ function sleep(ms) {
  /*----------------------------------------------------------
  TYPE WRITER EFFECT
  ----------------------------------------------------------*/
- const phrases = ["Vivien Therese Basco Villalobos.", "a Developer.", "a Human."];
+ const phrases = ["Vivien Therese Basco Villalobos.", "a Programmer.", "a Developer."];
  const el = document.querySelector("[data-typewrite]");
  const caret = document.querySelector(".caret");
  
@@ -287,12 +287,5 @@ document.addEventListener("DOMContentLoaded", function () {
            button.classList.add("active");
            document.getElementById(button.dataset.target).classList.add("active");
        });
-   });
-});
-buttons.forEach(button => {
-   button.addEventListener("keypress", (event) => {
-       if (event.key === "Enter" || event.key === " ") {
-           button.click(); // Simulates a click on key press
-       }
    });
 });

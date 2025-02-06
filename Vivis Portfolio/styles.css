@@ -902,18 +902,12 @@ FONTS
    font-weight: bold;
 }
 
-.tab-panel.active {
-   display: block;
-}
 .tab-panel {
    display: none;
-   opacity: 0;
-   transition: opacity 0.3s ease-in-out;
 }
 
 .tab-panel.active {
    display: block;
-   opacity: 1;
 }
 
  
