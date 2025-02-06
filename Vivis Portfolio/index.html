@@ -1,236 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio</title>
-      <link rel="stylesheet" href="styles.css" />
-      <link rel="icon" type="image/x-icon" href="assets/favicon/favicon-32x32.png">
 
-      <!-- ICONS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-      <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
-   </head>
-   <body>
-      <nav class="nav" id="navbar">
-         <div class="nav-container">
-            <a data-cursor="pointer,big" href="#home">Home</a>
-            <a data-cursor="pointer,big" href="#skills">Skills</a>
-            <a data-cursor="pointer,big" href="#projects">Projects</a>
-            <a data-cursor="pointer,big" href="#contact">Contact</a>
-         </div>
-      </nav>
-      <div class="cursor"></div>
-      <div class="prj-info-view">
-         <div class="prj-info-container"></div>
-         <button data-cursor="pointer" class="more-info btn">
-            <i class="bx bx-arrow-back"></i>
-         </button>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Portfolio</title>
+   <link rel="stylesheet" href="styles.css" />
+   <link rel="icon" type="image/x-icon" href="assets/favicon/favicon-32x32.png">
+
+   <!-- ICONS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+</head>
+
+<body>
+   <nav class="nav" id="navbar">
+      <div class="nav-container">
+         <a data-cursor="pointer,big" href="#home">Home</a>
+         <a data-cursor="pointer,big" href="#skills">Skills</a>
+         <a data-cursor="pointer,big" href="#projects">Projects</a>
+         <a data-cursor="pointer,big" href="#contact">Contact</a>
       </div>
-      <main>
-         <section id="home">
-            <div class="blob"></div>
-            <div class="blur"></div>
-            <div class="title-wrapper">
-               <h1 data-cursor="large,invert">Nice To Meet You!</h1>
-               <div class="typewriter">
-                  <div class="line">
-                     <div class="line-no">21</div>
-                     <div class="text tag">
-                        <span class="angle-brkt">&lt;</span>h1<span class="angle-brkt">&gt;</span>
-                     </div>
-                  </div>
-                  <div class="line">
-                     <div class="line-no">22</div>
-                     <!-- prettier-ignore -->
-                     <div class="text reg">
-                        I'm <span data-typewrite></span><div class="caret"></div>
-                     </div>
-                  </div>
-                  <div class="line">
-                     <div class="line-no">23</div>
-                     <div class="text tag">
-                        <span class="angle-brkt">&lt;/</span>h1<span class="angle-brkt">&gt;</span>
-                     </div>
-                  </div>
-                  <div class="doc-info">
-                     <abbr data-cursor="info" title="No Problems" class="problems">
-                        <div class="fail"><i class="fa-regular fa-circle-xmark"></i>0</div>
-                        <div class="danger"><i class="fa-solid fa-triangle-exclamation"></i>0</div>
-                     </abbr>
-
-                     <div class="type">
-                        <abbr data-cursor="info" title="Language Mode" popovertarget="html-po">HTML</abbr>
-                        <abbr data-cursor="info" title="Encoding">UTF-8</abbr>
-
-                        <div class="prettier">
-                           <i class="fa-solid fa-check"></i>
-                           <p>Prettier</p>
-                        </div>
-
-                        <abbr data-cursor="info" title="No New Notifications"><i class="fa-solid fa-bell"></i></abbr>
-                     </div>
+   </nav>
+   <div class="cursor"></div>
+   <div class="prj-info-view">
+      <div class="prj-info-container"></div>
+      <button data-cursor="pointer" class="more-info btn">
+         <i class="bx bx-arrow-back"></i>
+      </button>
+   </div>
+   <main>
+      <section id="home">
+         <div class="blob"></div>
+         <div class="blur"></div>
+         <div class="title-wrapper">
+            <h1 data-cursor="large,invert">Nice To Meet You!</h1>
+            <div class="typewriter">
+               <div class="line">
+                  <div class="line-no">21</div>
+                  <div class="text tag">
+                     <span class="angle-brkt">&lt;</span>h1<span class="angle-brkt">&gt;</span>
                   </div>
                </div>
-               <a href="#skills" data-cursor="pointer,big" class="scroll-arrow">
-                  <i class="fa-solid fa-chevron-down"></i>
-                  <i class="fa-solid fa-chevron-down"></i>
-                  <i class="fa-solid fa-chevron-down"></i>
-               </a>
-            </div>
-         </section>
-         <section id="skills">
-            <div class="experience-cont">
-               <h1 data-cursor="large,invert">My <span>Skills</span></h1>         
-               <div class="skills-section">
-                  <div class="tab-buttons">
-                      <button class="tab-btn active" data-target="technical">Technical Skills</button>
-                      <button class="tab-btn" data-target="soft">Soft Skills</button>
-                      <button class="tab-btn" data-target="tools">Tools & Technologies</button>
+               <div class="line">
+                  <div class="line-no">22</div>
+                  <!-- prettier-ignore -->
+                  <div class="text reg">
+                     I'm <span data-typewrite></span>
+                     <div class="caret"></div>
                   </div>
-          
-                  <div class="tab-content">
-                      <div id="technical" class="tab-panel active">
-                          <div class="code-cards-cont game-dev">
-                              <div class="code-card">JavaScript</div>
-                              <div class="code-card">Python</div>
-                              <div class="code-card">CSS</div>
-                              <div class="code-card">HTML</div>
-                          </div>
-                      </div>
-          
-                      <div id="soft" class="tab-panel">
-                          <div class="code-cards-cont soft-skills">
-                              <div class="code-card">Communication</div>
-                              <div class="code-card">Leadership</div>
-                              <div class="code-card">Problem Solving</div>
-                              <div class="code-card">Teamwork</div>
-                          </div>
-                      </div>
-          
-                      <div id="tools" class="tab-panel">
-                          <div class="code-cards-cont tools-tech">
-                              <div class="code-card">Git</div>
-                              <div class="code-card">GITHUB</div>
-                              <div class="code-card">VS Code</div>
-                          </div>
-                      </div>
+               </div>
+               <div class="line">
+                  <div class="line-no">23</div>
+                  <div class="text tag">
+                     <span class="angle-brkt">&lt;/</span>h1<span class="angle-brkt">&gt;</span>
                   </div>
-              </div>
+               </div>
+               <div class="doc-info">
+                  <abbr data-cursor="info" title="No Problems" class="problems">
+                     <div class="fail"><i class="fa-regular fa-circle-xmark"></i>0</div>
+                     <div class="danger"><i class="fa-solid fa-triangle-exclamation"></i>0</div>
+                  </abbr>
 
-              </section>
-                      
-         <div class="parallax">
-            <video autoplay muted loop>
-               <source src="videos/bg.mp4" type="video/mp4" />
-            </video>
+                  <div class="type">
+                     <abbr data-cursor="info" title="Language Mode" popovertarget="html-po">HTML</abbr>
+                     <abbr data-cursor="info" title="Encoding">UTF-8</abbr>
+
+                     <div class="prettier">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Prettier</p>
+                     </div>
+
+                     <abbr data-cursor="info" title="No New Notifications"><i class="fa-solid fa-bell"></i></abbr>
+                  </div>
+               </div>
+            </div>
+            <a href="#skills" data-cursor="pointer,big" class="scroll-arrow">
+               <i class="fa-solid fa-chevron-down"></i>
+               <i class="fa-solid fa-chevron-down"></i>
+               <i class="fa-solid fa-chevron-down"></i>
+            </a>
          </div>
-         <section id="projects">
-            <div data-cursor="large,invert" class="project-tile">
-               <h1>My <span>Projects</span></h1>             
-               <!-- New Stuff Start -->
-               <div class="prj-card hidden">
-                  <div class="header hidden">
-                     <div class="title">AppleTea <span>Self Project</span> <span class="new">New</span></div>
+      </section>
+
+      <!-- Font Awesome for icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+      <section id="skills">
+         <h1 class="skills-title"><span>My</span> Skills</h1>
+
+         <div class="skills-container">
+            <!-- Skill Categories -->
+            <div class="skill-categories">
+               <button class="skill-btn" onclick="showSkills('technical')">Technical Skills</button>
+               <button class="skill-btn" onclick="showSkills('soft')">Soft Skills</button>
+               <button class="skill-btn" onclick="showSkills('tools')">Tools & Technologies</button>
+            </div>
+
+            <!-- Technical Skills -->
+            <div id="technical" class="skills-grid">
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Python</h2>
+                     <p>Building scripts.</p>
                   </div>
-                  <div data-cursor="gray,large,move" class="thumbnail hidden">
-                     <img loading="lazy" src="images/site-thumbnails/appletea.png" alt="" />
+                  <i class="fab fa-python"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>HTML</h2>
+                     <p>Structuring web pages.</p>
                   </div>
-                  <button data-prj="projects/appletea.html" data-cursor="pointer" class="more-info hidden">
-                     view project
-                  </button>
+                  <i class="fab fa-html5"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>CSS</h2>
+                     <p>Styling and designing responsive web layouts.</p>
+                  </div>
+                  <i class="fab fa-css3-alt"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>JavaScript</h2>
+                     <p>Creating interactive web experiences.</p>
+                  </div>
+                  <i class="fab fa-js"></i>
                </div>
             </div>
-         </section>
-         <div class="parallax">
-            <video autoplay muted loop>
-               <source src="videos/bg.mp4" type="video/mp4" />
-            </video>
+
+            <!-- Soft Skills -->
+            <div id="soft" class="skills-grid hidden">
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Communication</h2>
+                     <p>Effectively sharing ideas and collaborating.</p>
+                  </div>
+                  <i class="fas fa-comments"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Time Management</h2>
+                     <p>Organizing tasks and meeting deadlines.</p>
+                  </div>
+                  <i class="fas fa-clock"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Problem Solving</h2>
+                     <p>Thinking critically to resolve challenges.</p>
+                  </div>
+                  <i class="fas fa-lightbulb"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Teamwork</h2>
+                     <p>Working efficiently with others to achieve goals.</p>
+                  </div>
+                  <i class="fas fa-users"></i>
+               </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div id="tools" class="skills-grid hidden">
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Git</h2>
+                     <p>Version control system for tracking changes.</p>
+                  </div>
+                  <i class="fab fa-git-alt"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>GitHub</h2>
+                     <p>Hosting for repositories and team collaboration.</p>
+                  </div>
+                  <i class="fab fa-github"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>VS Code</h2>
+                     <p>Lightweight, extensible code editor.</p>
+                  </div>
+                  <i class="fas fa-code"></i>
+               </div>
+               <div class="skill-card">
+                  <div class="skill-text">
+                     <h2>Ubuntu Linux</h2>
+                     <p>Powerful OS for development.</p>
+                  </div>
+                  <i class="fab fa-linux"></i>
+               </div>
+            </div>
+
+      </section>
+
+
+      </section>
+
+      <div class="parallax">
+         <video autoplay muted loop>
+            <source src="videos/bg.mp4" type="video/mp4" />
+         </video>
+      </div>
+      <section id="projects">
+         <div data-cursor="large,invert" class="project-tile">
+            <h1>My <span>Projects</span></h1>
+            <!-- New Stuff Start -->
+            <div class="prj-card hidden">
+               <div class="header hidden">
+                  <div class="title">AppleTea <span>Self Project</span> <span class="new">New</span></div>
+               </div>
+               <div data-cursor="gray,large,move" class="thumbnail hidden">
+                  <img loading="lazy" src="images/site-thumbnails/appletea.png" alt="" />
+               </div>
+               <button data-prj="projects/appletea.html" data-cursor="pointer" class="more-info hidden">
+                  view project
+               </button>
+            </div>
          </div>
-         <section id="contact">
-            <div class="contact-container">
-               <div class="contact-details hidden">
-                  <span class="bar"></span>
-                  <div class="about-me">
-                     <h3>About Me</h3>
-                     <div class="info">
-                        <div class="field">
-                           <p>
-                              Based in Thailand, I'm a developer who strives to enjoy bringing ideas to life through coding. .
-                           </p>
-                        </div>
-                        <div class="field">
-                           <div>Name:</div>
-                           <p>Vivien Therese Villalobos</p>
-                        </div>
-                        <div class="field">
-                           <div>Age:</div>
-                           <p><span id="age"></span> Years</p>
-                        </div>
-                        <div class="field">
-                           <div>Experience:</div>
-                           <p><span id="experience"></span> Months</p>
-                        </div>
+      </section>
+      <div class="parallax">
+         <video autoplay muted loop>
+            <source src="videos/bg.mp4" type="video/mp4" />
+         </video>
+      </div>
+      <section id="contact">
+         <div class="contact-container">
+            <div class="contact-details hidden">
+               <span class="bar"></span>
+               <div class="about-me">
+                  <h3>About Me</h3>
+                  <div class="info">
+                     <div class="field">
+                        <p>
+                           Based in Thailand, I'm a developer who strives to enjoy bringing ideas to life through
+                           coding. .
+                        </p>
                      </div>
-                  </div>
-                  <div class="location">
-                     <h3>Based In</h3>
-                     <span>Pakkret, Nonthaburi</span>
-                     <p>Thailand</p>
-                  </div>
-                  <div class="email">
-                     <h3>Contact</h3>
-                     <p>vtv.villalobos@gmail.com</p>
+                     <div class="field">
+                        <div>Name:</div>
+                        <p>Vivien Therese Villalobos</p>
+                     </div>
+                     <div class="field">
+                        <div>Age:</div>
+                        <p><span id="age"></span> Years</p>
+                     </div>
+                     <div class="field">
+                        <div>Experience:</div>
+                        <p><span id="experience"></span> Months</p>
+                     </div>
                   </div>
                </div>
-               <div class="contact-form-container hidden">
-                  <div class="contact-info hidden">
-                     <h1 data-cursor="large,invert">Contact <span>Me</span></h1>
-                     <p>Happen to have any questions? Drop me an email and I'll respond as soon as possible</p>
-                  </div>
-                  <form class="contact-form" action="https://formsubmit.co/el/vowoba" method="POST" target="_blank">
-                     <div class="input-box hidden">
-                        <input class="input" type="text" name="name" id="name" placeholder="" required />
-                        <label for="name">Name</label>
-                        <span class="input-highlight"></span>
-                     </div>
-                     <div class="input-box hidden">
-                        <input class="input" type="email" name="email" id="email" placeholder="" required />
-                        <label for="email"
-                           >Email <span class="invalid"><i class="ri-error-warning-line"></i></span
-                        ></label>
-                        <span class="input-highlight"></span>
-                     </div>
-                     <div class="input-box hidden">
-                        <textarea
-                           class="input"
-                           name="message"
-                           id="message"
-                           placeholder=""
-                           rows="6"
-                           style="resize: vertical"
-                           required
-                        ></textarea>
-                        <label for="message">Message</label>
-                        <span class="input-highlight"></span>
-                     </div>
-                     <button data-cursor="pointer" class="submit" type="submit">SUBMIT</button>
-                  </form>
+               <div class="location">
+                  <h3>Based In</h3>
+                  <span>Pakkret, Nonthaburi</span>
+                  <p>Thailand</p>
+               </div>
+               <div class="email">
+                  <h3>Contact</h3>
+                  <p>vtv.villalobos@gmail.com</p>
                </div>
             </div>
-         </section>
-         <footer>
-            <div class="links">
-               <a href="https://github.com/vivtv" target="_blank" id="profile-link"
-                  ><i class="fa-brands fa-github"></i
-               ></a>
+            <div class="contact-form-container hidden">
+               <div class="contact-info hidden">
+                  <h1 data-cursor="large,invert">Contact <span>Me</span></h1>
+                  <p>Happen to have any questions? Drop me an email and I'll respond as soon as possible</p>
+               </div>
+               <form class="contact-form" action="https://formsubmit.co/el/vowoba" method="POST" target="_blank">
+                  <div class="input-box hidden">
+                     <input class="input" type="text" name="name" id="name" placeholder="" required />
+                     <label for="name">Name</label>
+                     <span class="input-highlight"></span>
+                  </div>
+                  <div class="input-box hidden">
+                     <input class="input" type="email" name="email" id="email" placeholder="" required />
+                     <label for="email">Email <span class="invalid"><i class="ri-error-warning-line"></i></span></label>
+                     <span class="input-highlight"></span>
+                  </div>
+                  <div class="input-box hidden">
+                     <textarea class="input" name="message" id="message" placeholder="" rows="6"
+                        style="resize: vertical" required></textarea>
+                     <label for="message">Message</label>
+                     <span class="input-highlight"></span>
+                  </div>
+                  <button data-cursor="pointer" class="submit" type="submit">SUBMIT</button>
+               </form>
             </div>
-            <div class="text">
-               <p>2024 ©, <strong>All Rights Reserved</strong></p>
-            </div>
-         </footer>
-      </main>
-   </body>
-   <script src="script.js" defer></script>
+         </div>
+      </section>
+      <footer>
+         <div class="links">
+            <a href="https://github.com/vivtv" target="_blank" id="profile-link"><i class="fa-brands fa-github"></i></a>
+         </div>
+         <div class="text">
+            <p>2024 ©, <strong>All Rights Reserved</strong></p>
+         </div>
+      </footer>
+   </main>
+</body>
+<script src="script.js" defer></script>
+
 </html>

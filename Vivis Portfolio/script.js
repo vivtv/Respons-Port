@@ -273,19 +273,24 @@ function sleep(ms) {
  });
 
  // skills hover
-document.addEventListener("DOMContentLoaded", function () {
-   const buttons = document.querySelectorAll(".tab-btn");
-   const panels = document.querySelectorAll(".tab-panel");
-
-   buttons.forEach(button => {
-       button.addEventListener("click", () => {
-           // Remove active class from all buttons and panels
-           buttons.forEach(btn => btn.classList.remove("active"));
-           panels.forEach(panel => panel.classList.remove("active"));
-
-           // Add active class to clicked button and corresponding panel
-           button.classList.add("active");
-           document.getElementById(button.dataset.target).classList.add("active");
-       });
+ function showSkills(type) {
+   // Hide all skills-grid elements
+   document.querySelectorAll('.skills-grid').forEach(grid => {
+      grid.classList.add('hidden');
+      grid.classList.remove('show'); // Remove animation class
    });
-});
+
+   // Show the selected category
+   const selectedGrid = document.getElementById(type);
+   selectedGrid.classList.remove('hidden');
+   setTimeout(() => selectedGrid.classList.add('show'), 50); // Add animation delay
+
+   // Remove 'active' class from all buttons
+   document.querySelectorAll('.skill-btn').forEach(btn => btn.classList.remove('active'));
+
+   // Add 'active' class to the clicked button
+   if (event && event.currentTarget) {
+      event.currentTarget.classList.add('active');
+   }
+}
+
