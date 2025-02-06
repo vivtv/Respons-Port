@@ -1122,12 +1122,18 @@ FONTS
    border-top: solid 3px hsla(0, 0%, 100%, 0.05);
    padding: 1.5rem;
    border-radius: 0.5rem;
-   transition: transform 0.3s ease;
-   min-height: 500px; /* Ensures cards are taller */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   min-height: 400px; /* Ensures cards are taller */
 }
 
 .project-card:hover {
    transform: scale(1.05);
+   box-shadow: 0 0 20px rgba(96, 165, 250, 0.7); /* Glow effect */
+}
+
+/* Optional: Adjust glow color to match your theme */
+.project-card:hover {
+   box-shadow: 0 0 15px rgba(96, 165, 250, 0.5); 
 }
 
 .project-card img {
@@ -1159,6 +1165,12 @@ FONTS
 .project-card:hover {
    transform: scale(1.05);
 }
+
+.project-status span {
+   color: #4caf50; /* Green for completed */
+   font-weight: bold;
+}
+
  
  /*----------------------------------------------------------
  CONTACT SECTION
