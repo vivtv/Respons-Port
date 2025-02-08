@@ -212,3 +212,13 @@ document.querySelectorAll(".project-card").forEach(card => {
    });
 });
 
+// Services
+
+document.addEventListener("mousemove", (e) => {
+   const blob = document.querySelector(".blob");
+   const blur = document.querySelector(".blur");
+
+   const { clientX: x, clientY: y } = e;
+   blob.style.transform = `translate(${x / 30}px, ${y / 30}px)`;
+   blur.style.transform = `translate(-${x / 40}px, -${y / 40}px)`;
+});
